@@ -7,7 +7,8 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-   field :all_products, [Types::ProductType], null: false
+   field :all_products, [Types::ProductType], null: false,
+     description: 'fetch all products'
 
    def all_products
     Product.all
